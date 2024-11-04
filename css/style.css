@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+.visual {
+  width: 192rem;
+  height: 108rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* .visual iframe {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    pointer-events: none;
+} */
+
+.visual video {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  pointer-events: none;
+  filter: brightness(50%);
+}
+
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 100%; */
+  /* padding: 20px; */
+  color: white;
+  justify-content: flex-start;
+  width: 132rem;
+}
+
+.content-overlay h1 {
+  font-size: 6.4rem;
+  margin-bottom: 20px;
+}
+
+.content-overlay p {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.explore-btn {
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  background: #fff;
+  color: 000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.explore-btn:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.show h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 7.8rem 0;
+}
+
+.show .swiper-slide figure + div {
+  /* background: #ff5; */
+  padding: 20px;
+}
+
+.show h3 {
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+.show p {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.swiper {
+  margin: 0 auto;
+  display: flex;
+  flex-shrink: 0;
+  transition: 0.5s;
+  /* flex: 1 1 15%; */
+  /* gap: 2rem; */
+}
+
+.swiper-slide {
+  transition: 0.5s;
+  /* margin: 0 20rem; */
+  /* border: 1px solid #000; */
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  /* transition-property: unset !important; */
+}
+
+.swiper-slide:hover {
+  transition: 0.5s;
+  background: #000;
+  /* background: linear-gradient(187deg, rgba(102, 105, 106, 1) 0%, rgba(0, 0, 0, 1) 100%); */
+  color: #fff;
+
+  figure {
+    border-radius: 20px;
+    background: rgb(0, 212, 255);
+    background: linear-gradient(
+      19deg,
+      rgba(216, 249, 255, 1),
+      rgba(249, 249, 249, 1) 79%
+    );
+  }
+
+  button {
+    background: #fff;
+    color: #000;
+  }
+}
+
+.swiper-slide button {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.swiper-slide figure {
+  margin: 0 auto;
+  border: 1px solid #000;
+  display: flex;
+  aspect-ratio: 1/1.3;
+  /* height: 46.5rem; */
+}
+
+.swiper-slide figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.Function {
+  margin: 0 auto;
+  height: 55rem;
+  margin-bottom: 10rem;
+}
+
+.Function h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 7.3rem 0;
+}
+
+.Function-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 10rem; */
+}
+
+.Function-list > li {
+  border-radius: 5% 5% 0 0;
+  margin: 0 2.1rem;
+  width: 42.7rem;
+  height: 42rem;
+  transition: 0.5s;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.Function-list > li:hover {
+  background: #000;
+  width: 45rem;
+}
+
+.Function-list h2 {
+  margin-top: 2.4rem;
+  margin: 1.2rem auto;
+  /* border: 1px solid #000; */
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.Function-list p {
+  /* border: 1px solid #000; */
+  width: 40.4rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--sub-color);
+}
+
+.Function-list > li:hover p {
+  color: #fff;
+}
+
+.Function-list figure {
+  /* border: 1px solid #000; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Function-list img {
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.Event {
+  display: block;
+  /* position: relative; */
+  padding: 10rem 0;
+  margin: 0 auto;
+  height: 38.4rem;
+  margin-bottom: 10rem;
+  background: url(../img/Banner.png) no-repeat 50%;
+}
+
+/* .Event::before {
+    content: "";
+    position: absolute;
+    background: red;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: brightness(80%);
+    z-index: -1;
+} */
+
+.Event h2 {
+  color: #fff;
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Event p {
+  color: #fff;
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.Event button {
+  padding: 1rem 2rem;
+  border: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  transition: 0.5s;
+}
+
+.Event button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.Opinion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+  margin-bottom: 10rem;
+}
+
+.Opinion h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10rem;
+  color: #000;
+}
+
+.opinion-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.opinion-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 25rem;
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.opinion-card:hover {
+  transform: translateY(-10px);
+
+  .information p {
+    color: #fff;
+  }
+
+  .opinion-card i {
+    background: #fff;
+  }
+}
+
+.opinion-card i {
+  background: #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 3rem;
+  color: #333;
+}
+
+.information h3 {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.information img {
+  margin: 0.5rem 0;
+  width: 5rem;
+  height: auto;
+}
+
+.information p {
+  font-size: 1.6rem;
+  color: #666;
+  margin-top: 1rem;
+}
