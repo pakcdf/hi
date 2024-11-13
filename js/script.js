@@ -42,25 +42,41 @@
 //   return direction;
 // }
 
-let swiper = new Swiper(".swiper", {
-  slidesPerView: 1,
-  direction: "horizontal",
-  autoplay: {
-    delay: 3000, // 3초마다 슬라이드 변경
-    disableOnInteraction: false, // 사용자 상호작용 후에도 자동 재생 계속
-  },
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  spaceBetween: 50,
-  breakpoints: {
-    731: {
-      slidesPerView: 2,
-    },
-    1321: {
-      slidesPerView: 3,
-    },
-  },
+$(() => {
+	const $menuBtn = $(".mobile-menu-btn, .close-mobile-gnb");
+	const $blur = $(".blur");
+	const $mobileGNB = $(".mobile-gnb");
+	const $logo = $(".logo");
+	const $utilMenu = $(".util-menu");
+
+	let swiper = new Swiper(".swiper", {
+		slidesPerView: 1,
+		direction: "horizontal",
+		autoplay: {
+			delay: 3000, // 3초마다 슬라이드 변경
+			disableOnInteraction: false, // 사용자 상호작용 후에도 자동 재생 계속
+		},
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		spaceBetween: 50,
+		breakpoints: {
+			731: {
+				slidesPerView: 2,
+			},
+			1321: {
+				slidesPerView: 3,
+			},
+		},
+	});
+
+	$menuBtn.on("click", () => {
+		const isMenuOpen = !$mobileGNB.hasClass("active");
+		$mobileGNB.toggleClass("active", isMenuOpen);
+		$blur.toggleClass("active", isMenuOpen);
+		$logo.toggleClass("hide", isMenuOpen);
+		$utilMenu.toggleClass("hide", isMenuOpen);
+	});
 });
