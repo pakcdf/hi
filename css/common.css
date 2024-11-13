@@ -13,6 +13,10 @@
     font-size: 62.5%;
 }
 
+body {
+    min-width: 39rem;
+}
+
 hr,
 .hidden {
     position: absolute;
@@ -70,9 +74,18 @@ body {
     height: 8.8rem;
     /* background: #5f5; */
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     /* background: teal; */
+}
+
+.util-menu {
+    display: none;
+}
+
+.util-menu .mobile-menu-btn {
+    color: #fff;
+    font-size: 3.5rem;
 }
 
 .logo a {
@@ -166,7 +179,7 @@ body {
 #footer {
     top: 0;
     left: 0;
-    width: 100vw;
+    /* width: 100vw; */
     z-index: 10;
     display: flex;
     background: var(--footer-color);
@@ -209,10 +222,16 @@ body {
     color: #fff;
     font-weight: 400;
     font-size: 1.6rem;
-    background: var(--footer-button);
+    background: var(--sub-color);
     width: 11.2rem;
     height: 4.3rem;
     border-radius: 0 5rem 5rem 0;
+    transition: 0.4s;
+}
+
+.newsletter form button:hover {
+    /* color: var(--main-color); */
+    background: var(--sub-hover);
 }
 
 .footer-content {
@@ -227,14 +246,16 @@ body {
 #footer nav ul {
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    flex-wrap: wrap;
+    gap: 2rem 0;
+    /* align-items: left; */
 }
 
 #footer nav ul li {
     font-weight: 400;
     font-size: 1.6rem;
     color: var(--sub-color);
-    align-items: left;
+    align-items: flex-start;
     gap: 2rem;
     padding: 0 2rem;
 
@@ -265,4 +286,51 @@ body {
     align-items: center;
     width: 2.4rem;
     height: 2.4rem;
+}
+
+@media screen and (max-width: 1320px) {
+    .inner {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .inner {
+        width: 92.1875%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    nav .gnb {
+        display: none;
+    }
+
+    nav .icon {
+        display: none;
+    }
+
+    nav .btn-search {
+        display: none;
+    }
+
+    .util-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .inner {
+        width: 90.6976%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
 }

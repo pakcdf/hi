@@ -43,8 +43,8 @@
 // }
 
 let swiper = new Swiper(".swiper", {
-  slidesPerView: 3,
-  direction: getDirection(),
+  slidesPerView: 1,
+  direction: "horizontal",
   autoplay: {
     delay: 3000, // 3초마다 슬라이드 변경
     disableOnInteraction: false, // 사용자 상호작용 후에도 자동 재생 계속
@@ -54,18 +54,13 @@ let swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  on: {
-    resize: function () {
-      swiper.changeDirection(getDirection());
+  spaceBetween: 50,
+  breakpoints: {
+    731: {
+      slidesPerView: 2,
+    },
+    1321: {
+      slidesPerView: 3,
     },
   },
-  spaceBetween: 50,
 });
-
-function getDirection() {
-  var windowWidth = window.innerWidth;
-  var direction = window.innerWidth <= 760 ? "vertical" : "horizontal";
-
-  return direction;
-}
-5;
